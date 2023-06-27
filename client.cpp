@@ -31,6 +31,7 @@ int main() {
                 std::unique_ptr<CustomImg> ptr = std::make_unique<CustomImg>();
                 ptr->makeImg();
                 
+                conn << 1 << "\n"; //validInput check in server
                 unsigned char *pic = ptr->array;
                 int width = ptr->width;
                 int height = ptr->height;
@@ -43,7 +44,7 @@ int main() {
                 conn << "\n";
 
             } else {
-                conn << "Unknown command\n";
+                conn << 0;
             }
         }
     }

@@ -105,6 +105,7 @@ int main() {
                     }
 
                     if(validInput == false) {
+                        std::cout << "Unknown command\n";
                         l.unlock();
                         break;
                     }
